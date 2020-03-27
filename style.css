@@ -1,0 +1,147 @@
+/* TODO:
+1. Implement mobile hamburger nav bar
+2. Decide how to handle Google Forms on mobile.
+Maybe just make it a link to the external form?
+3. How do you get rid of the text-decoration on Learn More?
+4. Images go where? Animation of vent on home page using SVG?
+*/
+
+/*
+  Colors:
+  #FFFAFA Pinkish White
+  #FF5252 Bright Coral
+  #414141 Dark Gray
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 100%;
+}
+
+.page{
+  font-family: 'Rokkitt', serif;
+  background: #FFFAFA;
+}
+
+a{
+  text-decoration: none;
+}
+
+.notice{
+  color: #FF5252;
+  text-decoration: underline;
+}
+
+.navigation-container{
+  background: #FF5252;
+  height: 11.5vh;
+}
+
+.navigation-container a{
+  color: #FFFFFF;
+}
+
+.home{
+  height: 88.5vh;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #414141;
+}
+
+.content-container{
+  display: flex;
+  justify-content: center;
+}
+
+.emphasis{
+  font-weight: 700;
+}
+
+.learn-more{
+  padding: 10px;
+  font-size: calc(1rem + 0.5vw);
+  background-color: #FF5252; /* Bright Coral */
+  border: 5px solid #FF5252;
+  border-radius: 10px;
+}
+
+a .learn-more{
+  color: #FFFFFF;
+}
+
+.problem{
+  padding-top: 3.5vh;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  .navigation-links{
+    display: none;
+  }
+  .home{
+    font-size: calc(1.5rem + 1vw);
+  }
+  .content p{
+    padding: 0 5vw;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .logo{
+    margin-left: 2vw;
+    font-size: calc(1rem + 1vw);
+    padding: 10px;
+  }
+  .navigation-links{
+    font-size: calc(1rem + 0.5vw);
+  }
+  .button:hover{
+    background: #FFFFFF;
+    color: #FF5252;
+    border-radius: 5px;
+  }
+  .home{
+    width: 53vw;
+    font-size: calc(1.5rem + 1vw);
+  }
+  .about, .design, .resources{
+    width: 78vw;
+    font-size: calc(1.5rem + 1vw);
+  }
+  .hook{
+    margin-left: 4vw;
+    margin-bottom: 2vw;
+  }
+  .learn-more:hover{
+    background-color: #FFFAFA; /* Pinkish White */
+    border: 5px solid #FF5252;
+  }
+  a:hover .learn-more{
+    color: #FF5252; /* Bright Coral */
+    border-radius: 10px;
+  }
+  .heading{
+    font-size: calc(1rem + 1vw);
+    margin-top: 20px;
+  }
+  .description{
+    font-size: calc(1rem + 0.5vw);
+  }
+}
